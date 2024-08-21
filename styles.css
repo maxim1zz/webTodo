@@ -1,0 +1,10 @@
+.all {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#newDiv {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
