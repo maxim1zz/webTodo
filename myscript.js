@@ -2,7 +2,7 @@ document.getElementById("submit").addEventListener("click", submit);
 document.getElementById("delete").addEventListener("click", remove);
 let label = document.getElementById("checkbox");
 let counter = 1;
-
+localStorage.getItem("todos");
 function submit() {
   event.preventDefault();
   let userInput = document.getElementById("inputF");
@@ -18,7 +18,9 @@ function submit() {
     newList.appendChild(Checkbox);
 
     counter += 1;
-    console.log(counter);
+    localStorage.setItem("todos", userInput.value);
+    let storage = localStorage.getItem("todos");
+    console.log(storage);
   }
 }
 
@@ -35,3 +37,4 @@ function remove() {
     }
   }
 }
+
