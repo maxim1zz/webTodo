@@ -13,15 +13,18 @@
       <header id="heading">
         <h1>My Todo-list</h1>
       </header>
-      <form class="">
-        <div>
+      <form class="TodoList">
+        <div id="entrys">
           <label
             >Todos: <input onfocus="this.value=''" type="text" id="inputF"
           /></label>
 
           <button id="submit" type="submit">Submit</button>
+          <button id="delete" type="submit">Delete finished tasks</button>
         </div>
-        <div id="Todos"></div>
+        <div id="Todos">
+          <label id="checkbox"></label>
+        </div>
       </form>
     </div>
     <script src="myscript.js"></script>
