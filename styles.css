@@ -70,6 +70,8 @@ input:checked {
 header li {
     display: inline-block;
     margin: 0 15px;
+    position: relative;
+    left: 55%;
 }
 
 header li a {
@@ -90,7 +92,9 @@ header li:hover {
 }
 
 #todopic {
-    width: 10%;
+    position: relative;
+    left: 43%;
+    width: 15%;
     border-radius: 10%;
 }
 
