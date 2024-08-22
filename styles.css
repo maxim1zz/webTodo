@@ -2,6 +2,13 @@
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid black;
+  border-radius: 2%;
+  margin: auto;
+  width: 100%;
+  padding: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 li {
     position: relative;
@@ -38,3 +45,8 @@ input:not(:checked) {
 input:checked {
     margin-left: 5%;
 }
+
+
+
+
+
