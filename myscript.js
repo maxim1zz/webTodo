@@ -7,18 +7,19 @@ function submit() {
   event.preventDefault();
   let userInput = document.getElementById("inputF");
   let newList = document.createElement("li");
+  if (userInput.value.length != 0) {
+    newList.textContent = userInput.value;
+    newList.id = "newDiv" + counter;
+    label.appendChild(newList);
 
-  newList.textContent = userInput.value;
-  newList.id = "newDiv" + counter;
-  label.appendChild(newList);
+    let Checkbox = document.createElement("input");
+    Checkbox.type = "checkbox";
+    Checkbox.id = "check" + counter;
+    newList.appendChild(Checkbox);
 
-  let Checkbox = document.createElement("input");
-  Checkbox.type = "checkbox";
-  Checkbox.id = "check" + counter;
-  newList.appendChild(Checkbox);
-
-  counter += 1;
-  console.log(counter);
+    counter += 1;
+    console.log(counter);
+  }
 }
 
 function remove() {
