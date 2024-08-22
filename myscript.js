@@ -20,8 +20,8 @@ function submit() {
 
     counter += 1;
     localStorage.setItem("todos", userInput.value);
-    let storage = localStorage.getItem("todos");
-    console.log(storage);
+    /*let storage = localStorage.getItem("todos");
+    console.log(storage)*/
   }
 }
 
@@ -34,8 +34,30 @@ function remove() {
       let element = document.getElementById("newDiv" + count);
       if (element) {
         element.remove();
+        done();
       }
     }
+  }
+}
+
+function done() {
+
+  let finish = document.getElementById("finished");
+
+  let store = localStorage.getItem("todos");
+
+  if (store) {
+
+    let tasks = store.split(',');
+
+    tasks.forEach(function (task) {
+      let finishedTasks = document.createElement("li");
+      finishedTasks.textContent = task;
+      finishedTasks.id = "finishedTasks"
+      finish.appendChild(finishedTasks);
+    });
+  } else {
+    console.log("No tasks found in localStorage.");
   }
 }
 
