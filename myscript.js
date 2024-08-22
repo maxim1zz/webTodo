@@ -2,12 +2,13 @@ document.getElementById("submit").addEventListener("click", submit);
 document.getElementById("delete").addEventListener("click", remove);
 let label = document.getElementById("checkbox");
 let counter = 1;
-localStorage.getItem("todos");
+let store = localStorage.getItem("todos");
+
 function submit() {
   event.preventDefault();
   let userInput = document.getElementById("inputF");
   let newList = document.createElement("li");
-  if (userInput.value.length != 0) {
+  if (userInput.value.length != 0 && counter <= 5) {
     newList.textContent = userInput.value;
     newList.id = "newDiv" + counter;
     label.appendChild(newList);
@@ -37,4 +38,5 @@ function remove() {
     }
   }
 }
+
 
